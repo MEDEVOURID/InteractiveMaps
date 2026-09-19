@@ -1,14 +1,16 @@
 {
-   "homepage": "https://medevourid.github.io/InteractiveMaps/",
   "name": "site",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://medevourid.github.io/InteractiveMaps/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "framer-motion": "^13.4.0",
@@ -33,9 +35,5 @@
     "postcss": "^8.5.28",
     "tailwindcss": "^4.3.3",
     "vite": "^8.3.0"
-  },
-  "scripts": {
-"predeploy": "npm run build",
-"deploy": "gh-pages -d build"
-}
+  }
 }
